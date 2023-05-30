@@ -1,5 +1,5 @@
 resource "azurerm_linux_virtual_machine" "example" {
-  name                = "master-vm"
+  name                = "master-vm1"
   resource_group_name = var.resource_group_name
   location            = var.location
   size                = var.size
