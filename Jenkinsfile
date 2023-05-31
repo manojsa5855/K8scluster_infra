@@ -13,7 +13,7 @@ pipeline {
                 script {
                     //sh 'az login'
                     sh 'terraform init -reconfigure'
-                    sh 'terraform $(terraform) --auto-approve --target=module.$(module)'
+                    sh 'terraform ${terraform} --auto-approve --target=module.${module}'
                 }
             }
         }
