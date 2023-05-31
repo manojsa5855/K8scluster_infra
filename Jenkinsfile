@@ -11,7 +11,7 @@ pipeline {
         stage('Terraform Init and Apply') {
             steps {
                 script {
-                    sh 'az login'
+                    //sh 'az login'
                     sh 'terraform init'
                     sh 'terraform $(terraform) --auto-approve -lock=false --target=module.$(module)'
                 }
