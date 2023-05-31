@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Fetching cluster Infrastructure Code') {
             steps {
-                git branch: 'main', credentialsId: 'gitcred', url: 'https://github.com/manojsa5855/infrastructure.git'
+                git branch: 'main', credentialsId: 'gitcred', url: 'https://github.com/manojsa5855/K8scluster_infra.git'
             }
         }
 
