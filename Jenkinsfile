@@ -22,9 +22,9 @@ pipeline {
             steps {
                 script {
                     sh 'echo "[Master]" > /etc/ansible/hosts'
-                    sh 'az vm show -d -g Dev-RG -n master-vm --query publicIps -o tsv >> /etc/ansible/hosts'
+                    sh 'az vm show -d -g Dev-RG -n master-vm1 --query publicIps -o tsv >> /etc/ansible/hosts'
                     sh 'echo "[worker]" >> /etc/ansible/hosts'
-                    sh 'az vm show -d -g Dev-RG -n worker-vm --query publicIps -o tsv >> /etc/ansible/hosts'
+                    sh 'az vm show -d -g Dev-RG -n worker-vm1 --query publicIps -o tsv >> /etc/ansible/hosts'
                 }
             }
         }
